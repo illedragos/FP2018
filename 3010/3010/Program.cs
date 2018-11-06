@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 namespace _3010
 {
-    class Program
+    public class Program
     {
         #region Game
         static void Game()
