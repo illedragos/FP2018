@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, t;
+            long x, y, nr=0;
+
+            int[] v= new int[100000];
+
+            n = Convert.ToInt32(Console.ReadLine());
+                 for (int i = 0; i<n; i++)
+                 v[i] = Convert.ToInt32(Console.ReadLine());
+
+            t = Convert.ToInt32(Console.ReadLine());
+            while(t>0)
+            {
+                nr = 0;
+                x = Convert.ToInt32(Console.ReadLine());
+                y = Convert.ToInt32(Console.ReadLine());
+                for (long j = x; j <= y; j++)
+                    for (int k = 0; k < n; k++)
+                        if (j == v[k])
+                            nr++;
+                Console.WriteLine("In intervalul" + x + " " + y + "se gasesc " + nr + " valori din vector");
+                t--;
+            }
+        }
+
+
+
+    }
+}
+
+
